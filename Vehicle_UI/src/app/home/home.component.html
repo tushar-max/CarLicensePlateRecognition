@@ -1,0 +1,81 @@
+
+
+ <div class="photo-container" *ngIf="!showForm">
+    <!-- <img src="https://www.shaip.com/wp-content/uploads/2022/08/Blog_Automatic-Number-Plate-Recognition-ANPR.jpg" alt="images" class="background-photo" /> -->
+    <div class="overlay">
+        <h4>Experience the Future of Vehicle Recognition</h4>
+        <p>Effortlessly identify and track vehicles with unparalleled precision, anywhere and anytime.</p>
+        
+        <button (click)="showForm = true" class="btn">Get Started</button>
+    </div>
+</div>
+
+<div *ngIf="showForm">
+    <div class="photo-container">
+        <div class="overlay">
+           
+            <h4 class="dynamic-text">Enter the Path of the Video</h4>
+            <p class="dynamic-text">Unlock the Power of Instant Vehicle Recognition, Anywhere, Anytime</p>
+            
+            <form class="row g-3" #form="ngForm" (ngSubmit)="handleSubmit()">
+                <div class="col-12">
+                    <input type="text" class="form-control" name="PathUrl" placeholder="Path" [(ngModel)]="PathUrl">
+                </div>
+                <div class="col-12 mt-3">
+                    <button type="submit" class="btn btn-primary mb-3">Start Processing</button>
+                </div>
+               
+                  
+            </form>
+            <button *ngIf ="handleResults()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Recent Results
+              </button>
+              
+            <div *ngIf="loading">
+                <br>
+                <div class="spinner-border text-light" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+<div class="alert" [ngClass]="{'info': messageType === 'info', 'error': messageType === 'error', 'success': messageType === 'success'}" *ngIf="alertMessage">
+    {{ alertMessage }}
+  </div>
+
+
+  
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">RecentResult</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="dataframe table table-stripped">
+            <thead>
+              <tr>
+                <th>S.No</th>
+                <th>License Plate</th>
+                <th>Entry Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of data; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ item[0]}}</td>
+                <td>{{ item[1] }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  
+ 

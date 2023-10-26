@@ -1,0 +1,54 @@
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    width: 100%;
+    background: linear-gradient(to bottom, #37474F, #263238);
+    overflow-x: hidden; 
+  }
+
+  table {
+    width: 200%;
+    max-width: 1100px;
+    margin: 45px auto; 
+    background: linear-gradient(to bottom, #37474F, #263238);
+    color: #FFFFFF;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+
+  th, td {
+    border: 1px solid #546E7A;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  th {
+    background-color: #263238;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  @keyframes backgroundAnimation {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+  }
+
+  table {
+    animation: backgroundAnimation 10s infinite alternate linear;
+  }
+
+  tr:nth-child(even):hover {
+    background-color: #00b3ff;
+    color: #000000;
+  }
+
+  td:hover {
+    background-color: #00ffa2;
+    color: #000000;
+    transform: scale(1.1);
+    transition: all 0.3s;
+  }

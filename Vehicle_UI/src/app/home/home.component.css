@@ -1,0 +1,265 @@
+.image{
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.align{
+    margin-left: 50%;
+} 
+
+
+ 
+/* .photo-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+
+}  */
+.photo-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: url('https://www.shaip.com/wp-content/uploads/2022/08/Blog_Automatic-Number-Plate-Recognition-ANPR.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.background-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out 1 forwards;
+}
+
+.overlay h4 {
+  font-size: 36px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.overlay p {
+  font-size: 18px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.overlay .btn {
+  background-color: #7db8f8;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  animation: bounce 1.5s ;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+ 
+
+.overlay .btn:hover {
+  background: linear-gradient(45deg, #e8d5fc, #0056b3);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.dynamic-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.5s ease-in-out 1 forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+.btn-primary {
+  background-color: #007BFF;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.col-12 button {
+  display: block;
+  margin: 0 auto;
+}
+
+.col-12 input {
+  margin-bottom: 10px;
+}
+
+
+.alert-container {
+  position: fixed;
+  top: -50px; 
+  right: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1000; 
+  animation: fall 1s ease-in-out forwards; 
+}
+
+
+.alert.info {
+  background-color: #3498db;
+  color: #fff;
+}
+
+
+.alert.error {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+
+.alert.success {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+
+@keyframes fall {
+  0% {
+    top: -50px;
+    opacity: 0;
+  }
+  100% {
+    top: 20px;
+    opacity: 1;
+  }
+}
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+
+
+.modal-content {
+  border: none;
+  border-radius: 10px;
+  margin: 70px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background-color: #37065c;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
+.modal-header .btn-close {
+  color: #fff;
+}
+
+
+.modal-body {
+  background-color: #fff; 
+}
+
+/* 
+.modal-footer {
+  background-color: #055c45; 
+  color: #fff; 
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+} */
+
+
+.table {
+  margin-bottom: 0; 
+
+}
+
+.table thead {
+  background-color: #f8f9fa; 
+}
+
+.table thead th {
+  color: #333;
+}
+
+
+.table tbody tr {
+  background-color: #fff; 
+  border-bottom: 1px solid #dee2e6; 
+}
+
+.table tbody tr:hover {
+  background-color: #f0f0f0; 
+
+}
