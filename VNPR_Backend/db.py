@@ -2,7 +2,7 @@ from pymongo import MongoClient
 import datetime
 
 def connectToDataBase():
-    client = MongoClient("mongodb+srv://tusharawasthi722:Lba6ozn3KOsvoKAD@cluster1.is5zfdn.mongodb.net/")
+    client = MongoClient("mongodb+srv://XXXXXXX:<password>@cluster1.is5zfdn.mongodb.net/")#Connection string is hidden
     dbo = client.LisencePlates
     collection = dbo.Vehicle
     # print("Connected to MongoDb Atlas")
