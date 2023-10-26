@@ -27,7 +27,7 @@ This full-stack application is designed for real-time vehicle license plate reco
 
 ## Demo
 
-[![Demo](https://github.com/tushar-max/CarLicensePlateRecognition/assets/67724196/f9c8769c-c1d7-4151-9baf-4490d99cb34e)](https://github.com/tushar-max/CarLicensePlateRecognition/raw/main/DemoVideoWorkingPrototype.mp4)
+[![Demo](https://github.com/tushar-max/CarLicensePlateRecognition/assets/67724196/f9c8769c-c1d7-4151-9baf-4490d99cb34e)](https://github.com/tushar-max/CarLicensePlateRecognition/assets/67724196/efbc6f52-f802-4d91-8a03-b54b15858321)
 
 ## Installation and Setup
 
